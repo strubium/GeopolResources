@@ -43,7 +43,7 @@ public class GeoPolResources
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.BARRIER_TILE_ENTITY.get(), BarrierRenderer::new);
+            ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.BARRIER_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/barrier.png"));
         }
     }
 }

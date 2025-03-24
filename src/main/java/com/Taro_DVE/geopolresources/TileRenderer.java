@@ -10,13 +10,20 @@ import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.util.ResourceLocation;
 
-public class BarrierRenderer extends TileEntityRenderer<BarrierTileEntity> {
+public class TileRenderer extends TileEntityRenderer<BarrierTileEntity> {
 
-    private static final ResourceLocation TEXTURE = new ResourceLocation(GeoPolResources.MOD_ID, "textures/block/barrier.png");
+    private static ResourceLocation TEXTURE = new ResourceLocation(GeoPolResources.MOD_ID, "textures/block/barrier.png");
     private final BarrierModel model = new BarrierModel();
 
-    public BarrierRenderer(TileEntityRendererDispatcher rendererDispatcherIn) {
+    public TileRenderer(TileEntityRendererDispatcher rendererDispatcherIn) {
         super(rendererDispatcherIn);
+
+
+    }
+
+    public TileRenderer setTexture(String texture){
+        TEXTURE = new ResourceLocation(GeoPolResources.MOD_ID, texture);
+        return this;
     }
 
     @Override
