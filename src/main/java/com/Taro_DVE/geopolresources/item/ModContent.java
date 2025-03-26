@@ -3,6 +3,12 @@ package com.Taro_DVE.geopolresources.item;
 import com.Taro_DVE.geopolresources.GeoPolResources;
 import com.Taro_DVE.geopolresources.item.barrier.BarrierBlock;
 import com.Taro_DVE.geopolresources.item.barrier.BarrierTileEntity;
+import com.Taro_DVE.geopolresources.item.chair.homechair.HomeChairBlock;
+import com.Taro_DVE.geopolresources.item.chair.homechair.HomeChairTileEntity;
+import com.Taro_DVE.geopolresources.item.chair.officechair1.OfficeChair1Block;
+import com.Taro_DVE.geopolresources.item.chair.officechair1.OfficeChair1TileEntity;
+import com.Taro_DVE.geopolresources.item.chair.officechair2.OfficeChair2Block;
+import com.Taro_DVE.geopolresources.item.chair.officechair2.OfficeChair2TileEntity;
 import com.Taro_DVE.geopolresources.item.desk.corner.DeskCornerBlock;
 import com.Taro_DVE.geopolresources.item.desk.corner.DeskCornerTileEntity;
 import com.Taro_DVE.geopolresources.item.desk.corneralt1.DeskCornerAlt1Block;
@@ -21,6 +27,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -37,6 +44,9 @@ public class ModContent {
 
     // Blocks with Items
     public static final RegistryObject<Block> BARRIER_BLOCK = registerBlockWithItem("barrier_block", BarrierBlock::new);
+    public static final RegistryObject<Block> HOME_CHAIR_BLOCK = registerBlockWithItem("home_chair_block", HomeChairBlock::new);
+    public static final RegistryObject<Block> OFFICE_CHAIR_1_BLOCK = registerBlockWithItem("office_chair1_block", OfficeChair1Block::new);
+    public static final RegistryObject<Block> OFFICE_CHAIR_2_BLOCK = registerBlockWithItem("office_chair2_block", OfficeChair2Block::new);
     public static final RegistryObject<Block> DESK_LEFT = registerBlockWithItem("desk_left_block", DeskLeftBlock::new);
     public static final RegistryObject<Block> DESK_LEFTALT1 = registerBlockWithItem("desk_leftalt1_block", DeskLeftAlt1Block::new);
     public static final RegistryObject<Block> DESK_RIGHT = registerBlockWithItem("desk_right_block", DeskRightBlock::new);
@@ -46,15 +56,17 @@ public class ModContent {
     public static final RegistryObject<Block> DESK_CORNERALT1 = registerBlockWithItem("desk_corneralt1_block", DeskCornerAlt1Block::new);
 
     // Tile Entities
-    public static final RegistryObject<TileEntityType<BarrierTileEntity>> BARRIER_TILE_ENTITY = registerTileEntity("barrier_tile_entity", BarrierTileEntity::new, BARRIER_BLOCK);
-    public static final RegistryObject<TileEntityType<DeskLeftTileEntity>> DESK_LEFT_TILE_ENTITY = registerTileEntity("desk_left_tile_entity", DeskLeftTileEntity::new, DESK_LEFT);
-    public static final RegistryObject<TileEntityType<DeskRightTileEntity>> DESK_RIGHT_TILE_ENTITY = registerTileEntity("desk_right_tile_entity", DeskRightTileEntity::new, DESK_RIGHT);
-    public static final RegistryObject<TileEntityType<DeskRightAlt1TileEntity>> DESK_RIGHTALT1_TILE_ENTITY = registerTileEntity("desk_rightalt1_tile_entity", DeskRightAlt1TileEntity::new, DESK_RIGHTALT1);
-    public static final RegistryObject<TileEntityType<DeskMiddleTileEntity>> DESK_MIDDLE_TILE_ENTITY = registerTileEntity("desk_middle_tile_entity", DeskMiddleTileEntity::new, DESK_MIDDLE);
-    public static final RegistryObject<TileEntityType<DeskCornerTileEntity>> DESK_CORNER_TILE_ENTITY = registerTileEntity("desk_corner_tile_entity", DeskCornerTileEntity::new, DESK_CORNER);
-    public static final RegistryObject<TileEntityType<DeskCornerAlt1TileEntity>> DESK_CORNERALT1_TILE_ENTITY = registerTileEntity("desk_corneralt1_tile_entity", DeskCornerAlt1TileEntity::new, DESK_CORNERALT1);
-    public static final  RegistryObject<TileEntityType<DeskLeftAlt1TileEntity>> DESK_LEFTALT1_TILE_ENTITY = registerTileEntity("desk_leftalt1_tile_entity",  DeskLeftAlt1TileEntity::new, DESK_LEFTALT1);
-
+    public static final RegistryObject<TileEntityType<TileEntity>> BARRIER_TILE_ENTITY = registerTileEntity("barrier_tile_entity", BarrierTileEntity::new, BARRIER_BLOCK);
+    public static final RegistryObject<TileEntityType<TileEntity>> HOME_CHAIR_TILE_ENTITY = registerTileEntity("home_chair_tile_entity", HomeChairTileEntity::new, HOME_CHAIR_BLOCK);
+    public static final RegistryObject<TileEntityType<TileEntity>> OFFICE_CHAIR_1_TILE_ENTITY = registerTileEntity("office_chair_1_tile_entity", OfficeChair1TileEntity::new, OFFICE_CHAIR_1_BLOCK);
+    public static final RegistryObject<TileEntityType<TileEntity>> OFFICE_CHAIR_2_TILE_ENTITY = registerTileEntity("office_chair_2_tile_entity", OfficeChair2TileEntity::new, OFFICE_CHAIR_2_BLOCK);
+    public static final RegistryObject<TileEntityType<TileEntity>> DESK_LEFT_TILE_ENTITY = registerTileEntity("desk_left_tile_entity", DeskLeftTileEntity::new, DESK_LEFT);
+    public static final RegistryObject<TileEntityType<TileEntity>> DESK_RIGHT_TILE_ENTITY = registerTileEntity("desk_right_tile_entity", DeskRightTileEntity::new, DESK_RIGHT);
+    public static final RegistryObject<TileEntityType<TileEntity>> DESK_RIGHTALT1_TILE_ENTITY = registerTileEntity("desk_rightalt1_tile_entity", DeskRightAlt1TileEntity::new, DESK_RIGHTALT1);
+    public static final RegistryObject<TileEntityType<TileEntity>> DESK_MIDDLE_TILE_ENTITY = registerTileEntity("desk_middle_tile_entity", DeskMiddleTileEntity::new, DESK_MIDDLE);
+    public static final RegistryObject<TileEntityType<TileEntity>> DESK_CORNER_TILE_ENTITY = registerTileEntity("desk_corner_tile_entity", DeskCornerTileEntity::new, DESK_CORNER);
+    public static final RegistryObject<TileEntityType<TileEntity>> DESK_CORNERALT1_TILE_ENTITY = registerTileEntity("desk_corneralt1_tile_entity", DeskCornerAlt1TileEntity::new, DESK_CORNERALT1);
+    public static final  RegistryObject<TileEntityType<TileEntity>> DESK_LEFTALT1_TILE_ENTITY = registerTileEntity("desk_leftalt1_tile_entity",  DeskLeftAlt1TileEntity::new, DESK_LEFTALT1);
 
     private static RegistryObject<Block> registerBlockWithItem(String name, Supplier<Block> blockSupplier) {
         RegistryObject<Block> block = BLOCKS.register(name, blockSupplier);
