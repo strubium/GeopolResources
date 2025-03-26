@@ -15,6 +15,8 @@ import com.Taro_DVE.geopolresources.item.desk.middle.DeskMiddleBlock;
 import com.Taro_DVE.geopolresources.item.desk.middle.DeskMiddleTileEntity;
 import com.Taro_DVE.geopolresources.item.desk.right.DeskRightBlock;
 import com.Taro_DVE.geopolresources.item.desk.right.DeskRightTileEntity;
+import com.Taro_DVE.geopolresources.item.desk.rightalt1.DeskRightAlt1Block;
+import com.Taro_DVE.geopolresources.item.desk.rightalt1.DeskRightAlt1TileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -38,6 +40,7 @@ public class ModContent {
     public static final RegistryObject<Block> DESK_LEFT = registerBlockWithItem("desk_left_block", DeskLeftBlock::new);
     public static final RegistryObject<Block> DESK_LEFTALT1 = registerBlockWithItem("desk_leftalt1_block", DeskLeftAlt1Block::new);
     public static final RegistryObject<Block> DESK_RIGHT = registerBlockWithItem("desk_right_block", DeskRightBlock::new);
+    public static final RegistryObject<Block> DESK_RIGHTALT1 = registerBlockWithItem("desk_rightalt1_block", DeskRightAlt1Block::new);
     public static final RegistryObject<Block> DESK_MIDDLE = registerBlockWithItem("desk_middle_block", DeskMiddleBlock::new);
     public static final RegistryObject<Block> DESK_CORNER = registerBlockWithItem("desk_corner_block", DeskCornerBlock::new);
     public static final RegistryObject<Block> DESK_CORNERALT1 = registerBlockWithItem("desk_corneralt1_block", DeskCornerAlt1Block::new);
@@ -46,6 +49,7 @@ public class ModContent {
     public static final RegistryObject<TileEntityType<BarrierTileEntity>> BARRIER_TILE_ENTITY = registerTileEntity("barrier_tile_entity", BarrierTileEntity::new, BARRIER_BLOCK);
     public static final RegistryObject<TileEntityType<DeskLeftTileEntity>> DESK_LEFT_TILE_ENTITY = registerTileEntity("desk_left_tile_entity", DeskLeftTileEntity::new, DESK_LEFT);
     public static final RegistryObject<TileEntityType<DeskRightTileEntity>> DESK_RIGHT_TILE_ENTITY = registerTileEntity("desk_right_tile_entity", DeskRightTileEntity::new, DESK_RIGHT);
+    public static final RegistryObject<TileEntityType<DeskRightAlt1TileEntity>> DESK_RIGHTALT1_TILE_ENTITY = registerTileEntity("desk_rightalt1_tile_entity", DeskRightAlt1TileEntity::new, DESK_RIGHTALT1);
     public static final RegistryObject<TileEntityType<DeskMiddleTileEntity>> DESK_MIDDLE_TILE_ENTITY = registerTileEntity("desk_middle_tile_entity", DeskMiddleTileEntity::new, DESK_MIDDLE);
     public static final RegistryObject<TileEntityType<DeskCornerTileEntity>> DESK_CORNER_TILE_ENTITY = registerTileEntity("desk_corner_tile_entity", DeskCornerTileEntity::new, DESK_CORNER);
     public static final RegistryObject<TileEntityType<DeskCornerAlt1TileEntity>> DESK_CORNERALT1_TILE_ENTITY = registerTileEntity("desk_corneralt1_tile_entity", DeskCornerAlt1TileEntity::new, DESK_CORNERALT1);

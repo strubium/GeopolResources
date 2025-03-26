@@ -8,6 +8,7 @@ import com.Taro_DVE.geopolresources.item.desk.left.DeskLeftModel;
 import com.Taro_DVE.geopolresources.item.desk.leftalt1.DeskLeftAlt1Model;
 import com.Taro_DVE.geopolresources.item.desk.middle.DeskMiddleModel;
 import com.Taro_DVE.geopolresources.item.desk.right.DeskRightModel;
+import com.Taro_DVE.geopolresources.item.desk.rightalt1.DeskRightAlt1Model;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -51,6 +52,8 @@ public class GeoPolResources
             ClientRegistry.bindTileEntityRenderer(ModContent.DESK_CORNERALT1_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskCornerAlt1Model()));
 
             ClientRegistry.bindTileEntityRenderer(ModContent.DESK_LEFTALT1_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskLeftAlt1Model()));
+
+            ClientRegistry.bindTileEntityRenderer(ModContent.DESK_RIGHTALT1_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskRightAlt1Model()));
 
 
             ClientRegistry.bindTileEntityRenderer(ModContent.DESK_CORNER_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskCornerModel()));
