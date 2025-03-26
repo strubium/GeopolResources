@@ -14,5 +14,16 @@ public class ModItems {
 
     public static final RegistryObject<Item> BARRIER_BLOCK_ITEM = ITEMS.register("barrier_block",
             () -> new BlockItem(ModBlocks.BARRIER_BLOCK.get(), new Item.Properties().group( ItemGroup.BUILDING_BLOCKS)));
-}
 
+    public static final RegistryObject<Item> DESK_LEFT_ITEM = ITEMS.register("desk_left_block",
+            () -> new BlockItem(ModBlocks.DESK_LEFT.get(), new Item.Properties().group( ItemGroup.BUILDING_BLOCKS)));
+
+    public static final RegistryObject<Item> DESK_RIGHT_ITEM = ITEMS.register("desk_right_block",
+            () -> new BlockItem(ModBlocks.DESK_RIGHT.get(), new Item.Properties().group( ItemGroup.BUILDING_BLOCKS)));
+
+    public static final RegistryObject<Item> DESK_MIDDLE_ITEM = ITEMS.register("desk_middle_block",
+            () -> new BlockItem(ModBlocks.DESK_MIDDLE.get(), new Item.Properties().group( ItemGroup.BUILDING_BLOCKS)));
+
+    public static final RegistryObject<Item> DESK_CORNER_ITEM = ITEMS.register("desk_corner_block",
+            () -> new BlockItem(ModBlocks.DESK_CORNER.get(), new Item.Properties().group( ItemGroup.BUILDING_BLOCKS)));
+}

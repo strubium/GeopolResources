@@ -3,6 +3,11 @@ package com.Taro_DVE.geopolresources;
 import com.Taro_DVE.geopolresources.item.ModBlocks;
 import com.Taro_DVE.geopolresources.item.ModItems;
 import com.Taro_DVE.geopolresources.item.ModTileEntityTypes;
+import com.Taro_DVE.geopolresources.item.barrier.BarrierModel;
+import com.Taro_DVE.geopolresources.item.desk.corner.DeskCornerModel;
+import com.Taro_DVE.geopolresources.item.desk.left.DeskLeftModel;
+import com.Taro_DVE.geopolresources.item.desk.middle.DeskMiddleModel;
+import com.Taro_DVE.geopolresources.item.desk.right.DeskRightModel;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -43,7 +48,15 @@ public class GeoPolResources
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.BARRIER_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/barrier.png"));
+            ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.DESK_CORNER_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskCornerModel()));
+
+            ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.DESK_MIDDLE_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskMiddleModel()));
+
+            ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.DESK_RIGHT_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskRightModel()));
+
+            ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.DESK_LEFT_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskLeftModel()));
+
+            ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.BARRIER_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/barrier.png").setModel(new BarrierModel()));
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.Taro_DVE.geopolresources.item.barrier;
+package com.Taro_DVE.geopolresources.item.desk.right;
 
 import com.Taro_DVE.geopolresources.item.BlockBase;
 import net.minecraft.block.BlockState;
@@ -7,10 +7,10 @@ import net.minecraft.state.DirectionProperty;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockReader;
 
-public class BarrierBlock extends BlockBase {
+public class DeskRightBlock extends BlockBase {
     public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 
-    public BarrierBlock() {}
+    public DeskRightBlock() {}
 
     @Override
     public boolean hasTileEntity(BlockState state) {
@@ -19,7 +19,9 @@ public class BarrierBlock extends BlockBase {
 
     @Override
     public TileEntity createTileEntity(BlockState state, IBlockReader world) {
-       return new BarrierTileEntity();
+        return new DeskRightTileEntity();
     }
-
 }
+
+
+
