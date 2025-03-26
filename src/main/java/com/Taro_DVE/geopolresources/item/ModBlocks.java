@@ -4,6 +4,7 @@ package com.Taro_DVE.geopolresources.item;
 import com.Taro_DVE.geopolresources.GeoPolResources;
 import com.Taro_DVE.geopolresources.item.barrier.BarrierBlock;
 import com.Taro_DVE.geopolresources.item.desk.corner.DeskCornerBlock;
+import com.Taro_DVE.geopolresources.item.desk.corneralt1.DeskCornerAlt1Block;
 import com.Taro_DVE.geopolresources.item.desk.left.DeskLeftBlock;
 import com.Taro_DVE.geopolresources.item.desk.middle.DeskMiddleBlock;
 import com.Taro_DVE.geopolresources.item.desk.right.DeskRightBlock;
@@ -33,6 +34,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> DESK_CORNER = BLOCKS.register("desk_corner_block",
             () -> new DeskCornerBlock());
+
+    public static final RegistryObject<Block> DESK_CORNERALT1 = BLOCKS.register("desk_corneralt1_block",
+            () -> new DeskCornerAlt1Block());
 
 
 }

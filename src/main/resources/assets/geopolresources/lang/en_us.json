@@ -3,7 +3,10 @@
   "block.geopolresources.desk_middle_block": "Desk Middle",
   "block.geopolresources.desk_left_block": "Desk Left",
   "block.geopolresources.desk_right_block": "Desk Right",
-  "block.geopolresources.desk_corner_block": "Desk Corner"
+  "block.geopolresources.desk_corner_block": "Desk Corner",
+  "block.geopolresources.desk_corneralt1_block": "Desk Corner Alt 1",
+  "itemGroup.GeoPol Resources": "Props"
+
 
 
 }

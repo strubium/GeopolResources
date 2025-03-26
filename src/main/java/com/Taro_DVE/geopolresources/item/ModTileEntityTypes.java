@@ -40,4 +40,9 @@ public class ModTileEntityTypes {
                     () -> TileEntityType.Builder.create(DeskMiddleTileEntity::new, ModBlocks.DESK_CORNER.get()).build(null)
             );
 
+    public static final RegistryObject<TileEntityType<DeskMiddleTileEntity>> DESK_CORNERALT1_TILE_ENTITY =
+            TILE_ENTITY_TYPES.register("desk_corneralt1_tile_entity",
+                    () -> TileEntityType.Builder.create(DeskMiddleTileEntity::new, ModBlocks.DESK_CORNERALT1.get()).build(null)
+            );
+
 }

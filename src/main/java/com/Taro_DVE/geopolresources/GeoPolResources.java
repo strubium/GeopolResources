@@ -5,6 +5,7 @@ import com.Taro_DVE.geopolresources.item.ModItems;
 import com.Taro_DVE.geopolresources.item.ModTileEntityTypes;
 import com.Taro_DVE.geopolresources.item.barrier.BarrierModel;
 import com.Taro_DVE.geopolresources.item.desk.corner.DeskCornerModel;
+import com.Taro_DVE.geopolresources.item.desk.corneralt1.DeskCornerAlt1Model;
 import com.Taro_DVE.geopolresources.item.desk.left.DeskLeftModel;
 import com.Taro_DVE.geopolresources.item.desk.middle.DeskMiddleModel;
 import com.Taro_DVE.geopolresources.item.desk.right.DeskRightModel;
@@ -48,6 +49,9 @@ public class GeoPolResources
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.DESK_CORNERALT1_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskCornerAlt1Model()));
+
+
             ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.DESK_CORNER_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskCornerModel()));
 
             ClientRegistry.bindTileEntityRenderer(ModTileEntityTypes.DESK_MIDDLE_TILE_ENTITY.get(), (dispatcher) -> new TileRenderer(dispatcher).setTexture("textures/block/desk.png").setModel(new DeskMiddleModel()));

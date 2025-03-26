@@ -8,7 +8,7 @@ public class ModItemGroup {
     public static final ItemGroup GEOPOLRESOURCES_GROUP = new ItemGroup("GeoPol Resources") {
         @Override
         public ItemStack createIcon() {
-            return ItemStack.EMPTY;
+            return new ItemStack(ModItems.BARRIER_BLOCK_ITEM.get());
         }
     };
 }
